@@ -1,0 +1,27 @@
+<div class="content-container">
+  
+    <div class="container-fluid">
+  
+      
+  
+    </div>
+  </div>
+
+<table class="table table-borderless table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th id="name" scope="col">Name</th>
+        <th id="desc" scope="col">Description</th>
+        <th id="price" scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books" (click)="viewDetails(book.id)">
+        <th scope="row"><img src="{{book.image}}" alt=""></th>
+        <td>{{book.name}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.price | currency}}</td>
+      </tr>
+    </tbody>
+  </table>

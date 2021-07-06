@@ -3,14 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { AllbooksComponent } from './allbooks/allbooks.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ComedyComponent } from './comedy/comedy.component';
+import { SciencefictionComponent } from './sciencefiction/sciencefiction.component';
+import { BookComponent } from './book/book.component';
+import { SearchedbookComponent } from './searchedbook/searchedbook.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    AllbooksComponent,
+    ComedyComponent,
+    SciencefictionComponent,
+    BookComponent,
+    SearchedbookComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
